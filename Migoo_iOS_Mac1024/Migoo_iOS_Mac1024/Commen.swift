@@ -10,7 +10,7 @@ import Foundation
 class Commen {
     let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
     let url:Array<String> = ["http://www.36mg.cn/portal.php?mod=rss&catid=0",//门户
-    "http://www.36mg.cn/portal.php?mod=rss&catid=1",// 
+    "http://www.36mg.cn/portal.php?mod=rss&catid=1",//资讯
     "http://www.36mg.cn/portal.php?mod=rss&catid=2",//图文
     "http://www.36mg.cn/portal.php?mod=rss&catid=4",//视频
     "http://www.36mg.cn/forum.php?mod=rss&fid=2&auth=49a7RGyG5mzUpFBlqHRNzagmq0vXyuyZKo%2FKPrwiHi%2FbJEIz5a6mCi730bQ",//论坛store板块
