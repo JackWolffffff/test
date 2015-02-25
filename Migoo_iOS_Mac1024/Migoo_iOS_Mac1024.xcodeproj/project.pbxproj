@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C2DA3CC1A9D973C00218918 /* Migoo_iOS_Mac1024Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA3CB1A9D973C00218918 /* Migoo_iOS_Mac1024Tests.swift */; };
+		1C2DA41F1A9D988900218918 /* SCNavTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4161A9D988900218918 /* SCNavTabBar.bundle */; };
+		1C2DA4201A9D988900218918 /* SCNavTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4191A9D988900218918 /* SCNavTabBarController.m */; };
+		1C2DA4211A9D988900218918 /* SCNavTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA41C1A9D988900218918 /* SCNavTabBar.m */; };
+		1C2DA4221A9D988900218918 /* SCPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA41E1A9D988900218918 /* SCPopView.m */; };
+		1C2DA42B1A9D98DC00218918 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4241A9D98DC00218918 /* AboutUsViewController.swift */; };
+		1C2DA42C1A9D98DC00218918 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4251A9D98DC00218918 /* ContentViewController.swift */; };
+		1C2DA42D1A9D98DC00218918 /* TWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4261A9D98DC00218918 /* TWViewController.swift */; };
+		1C2DA42E1A9D98DC00218918 /* ZXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4271A9D98DC00218918 /* ZXViewController.swift */; };
+		1C2DA42F1A9D98DC00218918 /* MHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4281A9D98DC00218918 /* MHViewController.swift */; };
+		1C2DA4301A9D98DC00218918 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4291A9D98DC00218918 /* LaunchScreen.swift */; };
+		1C2DA4311A9D98DC00218918 /* SCNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA42A1A9D98DC00218918 /* SCNavigator.swift */; };
+		1C2DA43B1A9D990500218918 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4331A9D990500218918 /* logo.png */; };
+		1C2DA43C1A9D990500218918 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4341A9D990500218918 /* icon.png */; };
+		1C2DA43D1A9D990500218918 /* ClickMe.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4351A9D990500218918 /* ClickMe.png */; };
+		1C2DA43E1A9D990500218918 /* navBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4361A9D990500218918 /* navBottom.png */; };
+		1C2DA43F1A9D990500218918 /* 引导页one使用.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4371A9D990500218918 /* 引导页one使用.png */; };
+		1C2DA4401A9D990500218918 /* two使用.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4381A9D990500218918 /* two使用.png */; };
+		1C2DA4411A9D990500218918 /* three使用.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4391A9D990500218918 /* three使用.png */; };
+		1C2DA4421A9D990500218918 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA43A1A9D990500218918 /* Default.png */; };
+		1C2DA4491A9D992000218918 /* Commen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4441A9D992000218918 /* Commen.swift */; };
+		1C2DA44A1A9D992000218918 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4451A9D992000218918 /* Parser.swift */; };
+		1C2DA44B1A9D992000218918 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4461A9D992000218918 /* Define.swift */; };
+		1C2DA44C1A9D992000218918 /* PassValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4481A9D992000218918 /* PassValue.swift */; };
+		1C2DA44F1A9D995200218918 /* MigooRSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA44E1A9D995200218918 /* MigooRSS.swift */; };
+		1C2DA4541A9D996300218918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DA4501A9D996300218918 /* AppDelegate.swift */; };
+		1C2DA4551A9D996300218918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4511A9D996300218918 /* Main.storyboard */; };
+		1C2DA4561A9D996300218918 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4521A9D996300218918 /* Images.xcassets */; };
+		1C2DA4571A9D996300218918 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4531A9D996300218918 /* LaunchScreen.xib */; };
+		1C2DA45A1A9D998C00218918 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4591A9D998C00218918 /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C2DA3C61A9D973C00218918 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C2DA3A81A9D973C00218918 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C2DA3AF1A9D973C00218918;
+			remoteInfo = Migoo_iOS_Mac1024;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C2DA3B01A9D973C00218918 /* Migoo_iOS_Mac1024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migoo_iOS_Mac1024.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C2DA3C51A9D973C00218918 /* Migoo_iOS_Mac1024Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Migoo_iOS_Mac1024Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C2DA3CA1A9D973C00218918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C2DA3CB1A9D973C00218918 /* Migoo_iOS_Mac1024Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migoo_iOS_Mac1024Tests.swift; sourceTree = "<group>"; };
+		1C2DA4151A9D988900218918 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		1C2DA4161A9D988900218918 /* SCNavTabBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SCNavTabBar.bundle; sourceTree = "<group>"; };
+		1C2DA4181A9D988900218918 /* SCNavTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNavTabBarController.h; sourceTree = "<group>"; };
+		1C2DA4191A9D988900218918 /* SCNavTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNavTabBarController.m; sourceTree = "<group>"; };
+		1C2DA41B1A9D988900218918 /* SCNavTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNavTabBar.h; sourceTree = "<group>"; };
+		1C2DA41C1A9D988900218918 /* SCNavTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNavTabBar.m; sourceTree = "<group>"; };
+		1C2DA41D1A9D988900218918 /* SCPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPopView.h; sourceTree = "<group>"; };
+		1C2DA41E1A9D988900218918 /* SCPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPopView.m; sourceTree = "<group>"; };
+		1C2DA4241A9D98DC00218918 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		1C2DA4251A9D98DC00218918 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		1C2DA4261A9D98DC00218918 /* TWViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWViewController.swift; sourceTree = "<group>"; };
+		1C2DA4271A9D98DC00218918 /* ZXViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXViewController.swift; sourceTree = "<group>"; };
+		1C2DA4281A9D98DC00218918 /* MHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHViewController.swift; sourceTree = "<group>"; };
+		1C2DA4291A9D98DC00218918 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		1C2DA42A1A9D98DC00218918 /* SCNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNavigator.swift; sourceTree = "<group>"; };
+		1C2DA4331A9D990500218918 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1C2DA4341A9D990500218918 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		1C2DA4351A9D990500218918 /* ClickMe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClickMe.png; sourceTree = "<group>"; };
+		1C2DA4361A9D990500218918 /* navBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBottom.png; sourceTree = "<group>"; };
+		1C2DA4371A9D990500218918 /* 引导页one使用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "引导页one使用.png"; sourceTree = "<group>"; };
+		1C2DA4381A9D990500218918 /* two使用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two使用.png"; sourceTree = "<group>"; };
+		1C2DA4391A9D990500218918 /* three使用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three使用.png"; sourceTree = "<group>"; };
+		1C2DA43A1A9D990500218918 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1C2DA4441A9D992000218918 /* Commen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commen.swift; sourceTree = "<group>"; };
+		1C2DA4451A9D992000218918 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		1C2DA4461A9D992000218918 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		1C2DA4471A9D992000218918 /* Migoo_iOS_Mac1024-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Migoo_iOS_Mac1024-Bridging-Header.h"; sourceTree = "<group>"; };
+		1C2DA4481A9D992000218918 /* PassValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassValue.swift; sourceTree = "<group>"; };
+		1C2DA44E1A9D995200218918 /* MigooRSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MigooRSS.swift; sourceTree = "<group>"; };
+		1C2DA4501A9D996300218918 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1C2DA4511A9D996300218918 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1C2DA4521A9D996300218918 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1C2DA4531A9D996300218918 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		1C2DA4591A9D998C00218918 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C2DA3AD1A9D973C00218918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C2DA3C21A9D973C00218918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C2DA3A71A9D973C00218918 = {
+			isa = PBXGroup;
+			children = (
+				1C2DA3B21A9D973C00218918 /* Migoo_iOS_Mac1024 */,
+				1C2DA3C81A9D973C00218918 /* Migoo_iOS_Mac1024Tests */,
+				1C2DA3B11A9D973C00218918 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C2DA3B11A9D973C00218918 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA3B01A9D973C00218918 /* Migoo_iOS_Mac1024.app */,
+				1C2DA3C51A9D973C00218918 /* Migoo_iOS_Mac1024Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C2DA3B21A9D973C00218918 /* Migoo_iOS_Mac1024 */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA4581A9D997600218918 /* Supporting Files */,
+				1C2DA4501A9D996300218918 /* AppDelegate.swift */,
+				1C2DA4511A9D996300218918 /* Main.storyboard */,
+				1C2DA4521A9D996300218918 /* Images.xcassets */,
+				1C2DA4531A9D996300218918 /* LaunchScreen.xib */,
+				1C2DA44D1A9D994400218918 /* Model */,
+				1C2DA4431A9D990F00218918 /* Commen */,
+				1C2DA4321A9D98F100218918 /* Image */,
+				1C2DA4231A9D98B200218918 /* ViewController */,
+				1C2DA4141A9D988900218918 /* SCNavTabBar */,
+			);
+			path = Migoo_iOS_Mac1024;
+			sourceTree = "<group>";
+		};
+		1C2DA3C81A9D973C00218918 /* Migoo_iOS_Mac1024Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA3CB1A9D973C00218918 /* Migoo_iOS_Mac1024Tests.swift */,
+				1C2DA3C91A9D973C00218918 /* Supporting Files */,
+			);
+			path = Migoo_iOS_Mac1024Tests;
+			sourceTree = "<group>";
+		};
+		1C2DA3C91A9D973C00218918 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA3CA1A9D973C00218918 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C2DA4141A9D988900218918 /* SCNavTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA4151A9D988900218918 /* CommonMacro.h */,
+				1C2DA4161A9D988900218918 /* SCNavTabBar.bundle */,
+				1C2DA4171A9D988900218918 /* ViewControllers */,
+				1C2DA41A1A9D988900218918 /* Views */,
+			);
+			path = SCNavTabBar;
+			sourceTree = "<group>";
+		};
+		1C2DA4171A9D988900218918 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA4181A9D988900218918 /* SCNavTabBarController.h */,
+				1C2DA4191A9D988900218918 /* SCNavTabBarController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1C2DA41A1A9D988900218918 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA41B1A9D988900218918 /* SCNavTabBar.h */,
+				1C2DA41C1A9D988900218918 /* SCNavTabBar.m */,
+				1C2DA41D1A9D988900218918 /* SCPopView.h */,
+				1C2DA41E1A9D988900218918 /* SCPopView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C2DA4231A9D98B200218918 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA4241A9D98DC00218918 /* AboutUsViewController.swift */,
+				1C2DA4251A9D98DC00218918 /* ContentViewController.swift */,
+				1C2DA4261A9D98DC00218918 /* TWViewController.swift */,
+				1C2DA4271A9D98DC00218918 /* ZXViewController.swift */,
+				1C2DA4281A9D98DC00218918 /* MHViewController.swift */,
+				1C2DA4291A9D98DC00218918 /* LaunchScreen.swift */,
+				1C2DA42A1A9D98DC00218918 /* SCNavigator.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		1C2DA4321A9D98F100218918 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA4331A9D990500218918 /* logo.png */,
+				1C2DA4341A9D990500218918 /* icon.png */,
+				1C2DA4351A9D990500218918 /* ClickMe.png */,
+				1C2DA4361A9D990500218918 /* navBottom.png */,
+				1C2DA4371A9D990500218918 /* 引导页one使用.png */,
+				1C2DA4381A9D990500218918 /* two使用.png */,
+				1C2DA4391A9D990500218918 /* three使用.png */,
+				1C2DA43A1A9D990500218918 /* Default.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		1C2DA4431A9D990F00218918 /* Commen */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA4441A9D992000218918 /* Commen.swift */,
+				1C2DA4451A9D992000218918 /* Parser.swift */,
+				1C2DA4461A9D992000218918 /* Define.swift */,
+				1C2DA4471A9D992000218918 /* Migoo_iOS_Mac1024-Bridging-Header.h */,
+				1C2DA4481A9D992000218918 /* PassValue.swift */,
+			);
+			name = Commen;
+			sourceTree = "<group>";
+		};
+		1C2DA44D1A9D994400218918 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA44E1A9D995200218918 /* MigooRSS.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1C2DA4581A9D997600218918 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DA4591A9D998C00218918 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C2DA3AF1A9D973C00218918 /* Migoo_iOS_Mac1024 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C2DA3CF1A9D973C00218918 /* Build configuration list for PBXNativeTarget "Migoo_iOS_Mac1024" */;
+			buildPhases = (
+				1C2DA3AC1A9D973C00218918 /* Sources */,
+				1C2DA3AD1A9D973C00218918 /* Frameworks */,
+				1C2DA3AE1A9D973C00218918 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Migoo_iOS_Mac1024;
+			productName = Migoo_iOS_Mac1024;
+			productReference = 1C2DA3B01A9D973C00218918 /* Migoo_iOS_Mac1024.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C2DA3C41A9D973C00218918 /* Migoo_iOS_Mac1024Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C2DA3D21A9D973C00218918 /* Build configuration list for PBXNativeTarget "Migoo_iOS_Mac1024Tests" */;
+			buildPhases = (
+				1C2DA3C11A9D973C00218918 /* Sources */,
+				1C2DA3C21A9D973C00218918 /* Frameworks */,
+				1C2DA3C31A9D973C00218918 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C2DA3C71A9D973C00218918 /* PBXTargetDependency */,
+			);
+			name = Migoo_iOS_Mac1024Tests;
+			productName = Migoo_iOS_Mac1024Tests;
+			productReference = 1C2DA3C51A9D973C00218918 /* Migoo_iOS_Mac1024Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C2DA3A81A9D973C00218918 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Migoo;
+				TargetAttributes = {
+					1C2DA3AF1A9D973C00218918 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					1C2DA3C41A9D973C00218918 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 1C2DA3AF1A9D973C00218918;
+					};
+				};
+			};
+			buildConfigurationList = 1C2DA3AB1A9D973C00218918 /* Build configuration list for PBXProject "Migoo_iOS_Mac1024" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1C2DA3A71A9D973C00218918;
+			productRefGroup = 1C2DA3B11A9D973C00218918 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C2DA3AF1A9D973C00218918 /* Migoo_iOS_Mac1024 */,
+				1C2DA3C41A9D973C00218918 /* Migoo_iOS_Mac1024Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C2DA3AE1A9D973C00218918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C2DA43B1A9D990500218918 /* logo.png in Resources */,
+				1C2DA4551A9D996300218918 /* Main.storyboard in Resources */,
+				1C2DA4421A9D990500218918 /* Default.png in Resources */,
+				1C2DA41F1A9D988900218918 /* SCNavTabBar.bundle in Resources */,
+				1C2DA4571A9D996300218918 /* LaunchScreen.xib in Resources */,
+				1C2DA4561A9D996300218918 /* Images.xcassets in Resources */,
+				1C2DA43F1A9D990500218918 /* 引导页one使用.png in Resources */,
+				1C2DA43E1A9D990500218918 /* navBottom.png in Resources */,
+				1C2DA43D1A9D990500218918 /* ClickMe.png in Resources */,
+				1C2DA4411A9D990500218918 /* three使用.png in Resources */,
+				1C2DA43C1A9D990500218918 /* icon.png in Resources */,
+				1C2DA4401A9D990500218918 /* two使用.png in Resources */,
+				1C2DA45A1A9D998C00218918 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C2DA3C31A9D973C00218918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C2DA3AC1A9D973C00218918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C2DA42C1A9D98DC00218918 /* ContentViewController.swift in Sources */,
+				1C2DA4311A9D98DC00218918 /* SCNavigator.swift in Sources */,
+				1C2DA42D1A9D98DC00218918 /* TWViewController.swift in Sources */,
+				1C2DA4301A9D98DC00218918 /* LaunchScreen.swift in Sources */,
+				1C2DA44F1A9D995200218918 /* MigooRSS.swift in Sources */,
+				1C2DA42B1A9D98DC00218918 /* AboutUsViewController.swift in Sources */,
+				1C2DA42E1A9D98DC00218918 /* ZXViewController.swift in Sources */,
+				1C2DA4221A9D988900218918 /* SCPopView.m in Sources */,
+				1C2DA4541A9D996300218918 /* AppDelegate.swift in Sources */,
+				1C2DA4491A9D992000218918 /* Commen.swift in Sources */,
+				1C2DA44A1A9D992000218918 /* Parser.swift in Sources */,
+				1C2DA42F1A9D98DC00218918 /* MHViewController.swift in Sources */,
+				1C2DA44B1A9D992000218918 /* Define.swift in Sources */,
+				1C2DA4201A9D988900218918 /* SCNavTabBarController.m in Sources */,
+				1C2DA44C1A9D992000218918 /* PassValue.swift in Sources */,
+				1C2DA4211A9D988900218918 /* SCNavTabBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C2DA3C11A9D973C00218918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C2DA3CC1A9D973C00218918 /* Migoo_iOS_Mac1024Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C2DA3C71A9D973C00218918 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C2DA3AF1A9D973C00218918 /* Migoo_iOS_Mac1024 */;
+			targetProxy = 1C2DA3C61A9D973C00218918 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1C2DA3CD1A9D973C00218918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C2DA3CE1A9D973C00218918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C2DA3D01A9D973C00218918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Migoo_iOS_Mac1024/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Migoo_iOS_Mac1024/Migoo_iOS_Mac1024-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C2DA3D11A9D973C00218918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Migoo_iOS_Mac1024/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Migoo_iOS_Mac1024/Migoo_iOS_Mac1024-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1C2DA3D31A9D973C00218918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Migoo_iOS_Mac1024Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Migoo_iOS_Mac1024.app/Migoo_iOS_Mac1024";
+			};
+			name = Debug;
+		};
+		1C2DA3D41A9D973C00218918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Migoo_iOS_Mac1024Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Migoo_iOS_Mac1024.app/Migoo_iOS_Mac1024";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C2DA3AB1A9D973C00218918 /* Build configuration list for PBXProject "Migoo_iOS_Mac1024" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C2DA3CD1A9D973C00218918 /* Debug */,
+				1C2DA3CE1A9D973C00218918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C2DA3CF1A9D973C00218918 /* Build configuration list for PBXNativeTarget "Migoo_iOS_Mac1024" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C2DA3D01A9D973C00218918 /* Debug */,
+				1C2DA3D11A9D973C00218918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C2DA3D21A9D973C00218918 /* Build configuration list for PBXNativeTarget "Migoo_iOS_Mac1024Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C2DA3D31A9D973C00218918 /* Debug */,
+				1C2DA3D41A9D973C00218918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C2DA3A81A9D973C00218918 /* Project object */;
+}
