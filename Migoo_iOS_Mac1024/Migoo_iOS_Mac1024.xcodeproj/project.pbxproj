@@ -36,7 +36,6 @@
 		1C2DA4551A9D996300218918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4511A9D996300218918 /* Main.storyboard */; };
 		1C2DA4561A9D996300218918 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4521A9D996300218918 /* Images.xcassets */; };
 		1C2DA4571A9D996300218918 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4531A9D996300218918 /* LaunchScreen.xib */; };
-		1C2DA45A1A9D998C00218918 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DA4591A9D998C00218918 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -340,7 +339,6 @@
 				1C2DA4411A9D990500218918 /* three使用.png in Resources */,
 				1C2DA43C1A9D990500218918 /* icon.png in Resources */,
 				1C2DA4401A9D990500218918 /* two使用.png in Resources */,
-				1C2DA45A1A9D998C00218918 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

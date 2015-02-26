@@ -74,6 +74,7 @@
     [self viewConfig];
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

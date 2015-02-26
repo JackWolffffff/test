@@ -14,6 +14,7 @@ class  Parser: NSObject,NSXMLParserDelegate {
     var currentNodeName: String = "" //当前节点名称
     var imageCache = Dictionary<String,UIImage>()
     var parserDatas: Array <MigooRSS> = []
+    var str:NSString?
     
     func getData(url:String) {
         var urlStr = NSURL(string: url)
