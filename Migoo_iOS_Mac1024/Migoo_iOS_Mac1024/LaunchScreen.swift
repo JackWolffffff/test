@@ -84,7 +84,7 @@ class LaunchScreen: UIViewController,UIScrollViewDelegate {
     //寻找main控件 页面跳转
     func turnNextView(){
         var sb = UIStoryboard(name: "Main", bundle: nil)
-        var vc: AnyObject = sb.instantiateViewControllerWithIdentifier("Navgator") as UINavigationController
+        var vc: AnyObject = sb.instantiateViewControllerWithIdentifier("scnavigator") as SCNavigator
         //self.performSegueWithIdentifier("load", sender: self)
         self.presentViewController(vc as UIViewController, animated: true, completion: nil)
     }
