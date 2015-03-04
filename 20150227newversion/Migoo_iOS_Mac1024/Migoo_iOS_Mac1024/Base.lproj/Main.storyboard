@@ -75,8 +75,8 @@
                                                 <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default.png" translatesAutoresizingMaskIntoConstraints="NO" id="D4V-lj-suy">
                                                     <rect key="frame" x="16" y="12" width="105" height="76"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="105" id="80M-AE-XzC"/>
-                                                        <constraint firstAttribute="height" constant="76" id="TLs-Mp-lxr"/>
+                                                        <constraint firstAttribute="height" constant="76" id="a04-ni-EFF"/>
+                                                        <constraint firstAttribute="width" constant="105" id="vQQ-Ep-8Pj"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOA-Lj-tUE">
@@ -87,9 +87,6 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAh-KW-IGg">
                                                     <rect key="frame" x="144" y="22" width="156" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="rG9-fh-eic"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -101,6 +98,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="BOA-Lj-tUE" secondAttribute="bottom" constant="15" id="7Kz-FW-Jxs"/>
                                                 <constraint firstItem="QAh-KW-IGg" firstAttribute="leading" secondItem="0DU-Sv-RM4" secondAttribute="leading" constant="144" id="9rg-Mq-9fR"/>
                                                 <constraint firstItem="BOA-Lj-tUE" firstAttribute="top" secondItem="QAh-KW-IGg" secondAttribute="bottom" constant="21" id="C7A-zm-5OM"/>
+                                                <constraint firstAttribute="bottom" secondItem="D4V-lj-suy" secondAttribute="bottom" constant="11" id="V0m-4Z-ql9"/>
                                                 <constraint firstAttribute="trailing" secondItem="BOA-Lj-tUE" secondAttribute="trailing" constant="20" id="aEz-RP-kms"/>
                                                 <constraint firstAttribute="trailing" secondItem="QAh-KW-IGg" secondAttribute="trailing" constant="20" id="bc1-rs-YXK"/>
                                                 <constraint firstItem="QAh-KW-IGg" firstAttribute="top" secondItem="0DU-Sv-RM4" secondAttribute="topMargin" constant="14" id="hHM-y4-RSo"/>
@@ -117,7 +115,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="资 讯" id="q35-ae-KSv"/>
+                    <navigationItem key="navigationItem" title="资 讯" id="Gps-xG-Fmd"/>
                     <connections>
                         <outlet property="tableView" destination="WSW-Dm-XaD" id="xxv-xY-fx8"/>
                     </connections>

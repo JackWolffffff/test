@@ -30,6 +30,7 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         if tableData.count == 0 {
             refreshData()
         }
+        tableView.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
