@@ -12,7 +12,7 @@ import UIKit
 class Commen {
     let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
     let url:Array<String> = [
-        "http://www.mac1024.com/portal.php?mod=rss&catid=0",//门户
+        //"http://www.mac1024.com/portal.php?mod=rss&catid=0",//门户
         "http://www.mac1024.com/portal.php?mod=rss&catid=1",//资讯
         "http://www.mac1024.com/portal.php?mod=rss&catid=2",//图文
         "http://www.mac1024.com/portal.php?mod=rss&catid=4",//视频

@@ -20,6 +20,7 @@
 		1C7BCACA1AA001A000831405 /* MigooRSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BCAC91AA001A000831405 /* MigooRSS.swift */; };
 		1C7BCACF1AA002B000831405 /* LTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BCACE1AA002B000831405 /* LTViewController.swift */; };
 		1CCB49E41AA006E300D055C3 /* ArticleShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB49E31AA006E300D055C3 /* ArticleShowViewController.swift */; };
+		1CF0464D1AA6EE0300266481 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF0464C1AA6EE0300266481 /* default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		1C7BCAC91AA001A000831405 /* MigooRSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MigooRSS.swift; sourceTree = "<group>"; };
 		1C7BCACE1AA002B000831405 /* LTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTViewController.swift; sourceTree = "<group>"; };
 		1CCB49E31AA006E300D055C3 /* ArticleShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleShowViewController.swift; sourceTree = "<group>"; };
+		1CF0464C1AA6EE0300266481 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		1C7BCA9C1A9FFDDC00831405 /* Migoo_iOS_Mac1024 */ = {
 			isa = PBXGroup;
 			children = (
+				1CD4C6481AA6CE91004C658E /* Images */,
 				1C7BCACB1AA0024800831405 /* VIewControllers */,
 				1C7BCAC81AA0018500831405 /* Model */,
 				1C7BCAC11AA000C100831405 /* Commen */,
@@ -155,6 +158,14 @@
 				1CCB49E31AA006E300D055C3 /* ArticleShowViewController.swift */,
 			);
 			name = VIewControllers;
+			sourceTree = "<group>";
+		};
+		1CD4C6481AA6CE91004C658E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1CF0464C1AA6EE0300266481 /* default.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 				1C7BCAA71A9FFDDC00831405 /* Main.storyboard in Resources */,
 				1C7BCAAC1A9FFDDC00831405 /* LaunchScreen.xib in Resources */,
 				1C7BCAA91A9FFDDC00831405 /* Images.xcassets in Resources */,
+				1CF0464D1AA6EE0300266481 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Migoo_iOS_Mac1024/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -401,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Migoo_iOS_Mac1024/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -76,8 +76,7 @@ class ZXViewController:  UITableViewController, UITableViewDataSource, UITableVi
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         cell.accessoryType = UITableViewCellAccessoryType.None
-        
-        
+
         //设置标题和副标题
         var lbTitle = cell.viewWithTag(1) as UILabel
         var lbTime = cell.viewWithTag(2) as UILabel
@@ -92,8 +91,8 @@ class ZXViewController:  UITableViewController, UITableViewDataSource, UITableVi
         lbTitle.text = tableData[indexPath.item].title
         lbTime.text = "\(day) \(month) \(year) edit by \(author)"
         
-        
         //设置缩略图
+        
         let urlstr = tableData[indexPath.item].enclosure
         let image = self.imageCache[urlstr]
         var vImage = cell.viewWithTag(3) as UIImageView

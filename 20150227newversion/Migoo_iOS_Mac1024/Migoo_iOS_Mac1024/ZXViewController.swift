@@ -10,10 +10,12 @@ import UIKit
 
 class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var tableData:Array<MigooRSS> = []
-    var parseUrl = Commen().url[2]
+    var parseUrl = Commen().url[0]
     
+    //缩略图缓存
     var imageCache = Dictionary<String, UIImage>()
     var refresh = UIRefreshControl()
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,9 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         var p = Parser()
         p.getData(parseUrl)
         tableData = p.parserDatas
+        if tableData.count == 0 {
+            refreshData()
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -54,6 +59,34 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         cell.accessoryType = UITableViewCellAccessoryType.None
         //设置标题
         
+        var time = tableData[indexPath.item].pubDate
+        var day = time.substringWithRange(Range<String.Index>(start: advance(time.startIndex, 5), end: advance(time.startIndex, 7)))
+        var month = time.substringWithRange(Range<String.Index>(start: advance(time.startIndex, 8), end: advance(time.startIndex, 11)))
+        var year = time.substringWithRange(Range<String.Index>(start:advance(time.startIndex, 12), end: advance(time.startIndex, 16)))
+        var author = tableData[indexPath.item].author
+        var titlelb:UILabel = cell.viewWithTag(1) as UILabel
+        titlelb.text = tableData[indexPath.item].title
+        var timelb:UILabel = cell.viewWithTag(2) as UILabel
+        timelb.text = "\(day)/\(month)/\(year) edit by \(author)"
+        //设置图标
+        let url = tableData[indexPath.item].enclosure
+        let image = self.imageCache[url]
+        var vImage = cell.viewWithTag(3) as UIImageView
+        if image? != "" {
+            let imgUrl = NSURL(string: url)
+            let request = NSURLRequest(URL: imgUrl!)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(),completionHandler: { (response:NSURLResponse!, data:NSData!, error:NSError!)
+                -> Void in
+                if data != nil {
+                    vImage.image = UIImage(data: data)
+                    self.imageCache[url] = vImage.image
+                } else {
+                    vImage.image = UIImage(named: "default.png")
+                }
+            })
+        } else {
+            vImage.image = image
+        }
         return cell
     }
     
