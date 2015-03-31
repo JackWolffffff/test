@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C9CC5C21AA9ADBC000D8606 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9CC5C01AA9ADBC000D8606 /* GTMBase64.m */; };
+		1CD3309C1AAEA4F9005FB76C /* EncryptionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3309B1AAEA4F9005FB76C /* EncryptionUtil.m */; };
+		1CFB683E1AAD8FFC00280A7B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB683D1AAD8FFC00280A7B /* Base64.m */; };
 		1CFFF3131AA8453000293098 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFF3121AA8453000293098 /* main.m */; };
 		1CFFF3161AA8453000293098 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFF3151AA8453000293098 /* AppDelegate.m */; };
 		1CFFF3191AA8453000293098 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFF3181AA8453000293098 /* ViewController.m */; };
@@ -32,6 +34,10 @@
 		1C9CC5BF1AA9ADBC000D8606 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		1C9CC5C01AA9ADBC000D8606 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		1C9CC5C11AA9ADBC000D8606 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		1CD3309A1AAEA4F9005FB76C /* EncryptionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionUtil.h; sourceTree = "<group>"; };
+		1CD3309B1AAEA4F9005FB76C /* EncryptionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionUtil.m; sourceTree = "<group>"; };
+		1CFB683C1AAD8FFC00280A7B /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		1CFB683D1AAD8FFC00280A7B /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		1CFFF30D1AA8453000293098 /* HttpRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HttpRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFFF3111AA8453000293098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CFFF3121AA8453000293098 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +141,10 @@
 				1C9CC5C11AA9ADBC000D8606 /* GTMDefines.h */,
 				1CFFF3361AA8600900293098 /* Base64Func.h */,
 				1CFFF3371AA8600900293098 /* Base64Func.m */,
+				1CFB683C1AAD8FFC00280A7B /* Base64.h */,
+				1CFB683D1AAD8FFC00280A7B /* Base64.m */,
+				1CD3309A1AAEA4F9005FB76C /* EncryptionUtil.h */,
+				1CD3309B1AAEA4F9005FB76C /* EncryptionUtil.m */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -239,10 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD3309C1AAEA4F9005FB76C /* EncryptionUtil.m in Sources */,
 				1CFFF3381AA8600900293098 /* Base64Func.m in Sources */,
 				1CFFF3191AA8453000293098 /* ViewController.m in Sources */,
 				1C9CC5C21AA9ADBC000D8606 /* GTMBase64.m in Sources */,
 				1CFFF3161AA8453000293098 /* AppDelegate.m in Sources */,
+				1CFB683E1AAD8FFC00280A7B /* Base64.m in Sources */,
 				1CFFF3131AA8453000293098 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

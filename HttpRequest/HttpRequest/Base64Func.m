@@ -22,10 +22,10 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 {
     if (text && ![text isEqualToString:LocalStr_None]) {
         //取项目的bundleIdentifier作为KEY  改动了此处
-        //NSString *key = [[NSBundle mainBundle] bundleIdentifier];
+        NSString *key = [[NSBundle mainBundle] bundleIdentifier];
         NSData *data = [text dataUsingEncoding:NSUTF8StringEncoding];
         //IOS 自带DES加密 Begin  改动了此处
-        //data = [self DESEncrypt:data WithKey:key];
+        data = [self DESEncrypt:data WithKey:key];
         //IOS 自带DES加密 End
         return [self base64EncodedStringFrom:data];
     }
@@ -143,10 +143,10 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     static char *decodingTable = NULL;
     if (decodingTable == NULL)
     {
-        decodingTable = malloc(256);
+        decodingTable = malloc(2048);
         if (decodingTable == NULL)
             return nil;
-        memset(decodingTable, CHAR_MAX, 256);
+        memset(decodingTable, CHAR_MAX, 2048);
         NSUInteger i;
         for (i = 0; i < 64; i++)
             decodingTable[(short)encodingTable[i]] = i;

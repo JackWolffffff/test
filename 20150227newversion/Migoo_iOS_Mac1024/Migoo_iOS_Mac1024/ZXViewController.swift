@@ -10,7 +10,8 @@ import UIKit
 
 class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var tableData:Array<MigooRSS> = []
-    var parseUrl = Commen().url[0]
+    var parseUrl = urlzx
+    let identifier = "cell"
     
     //缩略图缓存
     var imageCache = Dictionary<String, UIImage>()
@@ -19,6 +20,9 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //加载nib
+        var nib = UINib(nibName: "ArticleListCell", bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: identifier)
         refresh.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
         refresh.attributedTitle = NSAttributedString(string: "下拉刷新内容")
         tableView.addSubview(refresh)
@@ -65,30 +69,37 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         var month = time.substringWithRange(Range<String.Index>(start: advance(time.startIndex, 8), end: advance(time.startIndex, 11)))
         var year = time.substringWithRange(Range<String.Index>(start:advance(time.startIndex, 12), end: advance(time.startIndex, 16)))
         var author = tableData[indexPath.item].author
-        var titlelb:UILabel = cell.viewWithTag(1) as UILabel
-        titlelb.text = tableData[indexPath.item].title
-        var timelb:UILabel = cell.viewWithTag(2) as UILabel
-        timelb.text = "\(day)/\(month)/\(year) edit by \(author)"
+        cell.textLabel?.font = UIFont(name: "宋体", size: 14.0)
+        cell.textLabel?.text = tableData[indexPath.item].title
+        cell.detailTextLabel?.text = "\(day)/\(month)/\(year) edit by \(author)"
         //设置图标
         let url = tableData[indexPath.item].enclosure
         let image = self.imageCache[url]
-        var vImage = cell.viewWithTag(3) as UIImageView
-        if image? != "" {
+        //var vImage = cell.imageView?.image
+        if image? != nil {
             let imgUrl = NSURL(string: url)
             let request = NSURLRequest(URL: imgUrl!)
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(),completionHandler: { (response:NSURLResponse!, data:NSData!, error:NSError!)
                 -> Void in
                 if data != nil {
-                    vImage.image = UIImage(data: data)
-                    self.imageCache[url] = vImage.image
+                    cell.imageView?.image = UIImage(data: data)
+                    self.imageCache[url] = cell.imageView?.image
                 } else {
-                    vImage.image = UIImage(named: "default.png")
+                    cell.imageView?.image = UIImage(named: "default.png")
                 }
             })
         } else {
-            vImage.image = image
+            cell.imageView?.image = image
         }
         return cell
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var articleView = storyBoard.instantiateViewControllerWithIdentifier("articleView") as ArticleShowViewController
+        articleView.articleContent = tableData[indexPath.item].description
+        //隐藏tabbar
+        articleView.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(articleView, animated:true)
+        
     }
     
 

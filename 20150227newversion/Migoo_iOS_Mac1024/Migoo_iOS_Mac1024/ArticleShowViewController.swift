@@ -9,5 +9,9 @@
 import UIKit
 
 class ArticleShowViewController: UIViewController {
-
+    var articleContent:NSString?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        println("article:\(articleContent)")
+    }
 }

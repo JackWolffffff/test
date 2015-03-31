@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "Base64Func.h"
 #import <CommonCrypto/CommonDigest.h>
-#import <CommonCrypto/CommonCryptor.h>
+//#import <CommonCrypto/CommonCryptor.h>
 #import "Base64Func.h"
-#import "GTMBase64.h"
+#import "GTMBase64.h" 
+#import "Base64.h"
 
 @interface ViewController ()
 
@@ -37,12 +38,12 @@
     
     NSString *identifierForVendor = [[UIDevice currentDevice].identifierForVendor UUIDString];
     NSString * username = @"15034079275";
-    NSString * pwd = @"1234567890";
+    NSString * pwd = @"e317b362fafa0c96c20b8543d054b850";
     NSString * regID = identifierForVendor; //设备ID
     NSString * appType = @"2"; //android 是1  ios 就是2
     NSString * bizType = @"1"; //买家版是1  卖家版是2
     //接口地址
-    NSMutableString * result = [[NSMutableString alloc] initWithString:@"http://51baihong.eicp.net:8080/widget?type=member_login&ajax=yes&action=remotelogin&loginkey="];
+    NSMutableString * result = [[NSMutableString alloc] initWithString:@"http://www.51baihong.com/widget?type=member_login&ajax=yes&action=remotelogin&loginkey="];
     NSMutableString * loginkey = [[NSMutableString alloc] init];
     
     //对密码进行md5加密
@@ -50,26 +51,30 @@
     //拼接loginkey
     loginkey = [[NSMutableString alloc] initWithFormat:@"{\"username\":\"%@\",\"password\":\"%@\",\"regID\":\"%@\",\"appType\":\"%@\",\"bizType\":\"%@\"}", username, pwdMD5, regID, appType, bizType];
     
+    
     NSLog(@"%@", loginkey);
 #pragma 对loginkey进行base64加密
-    NSData * data = [Base64Func dataWithBase64EncodedString:loginkey];
-
-    NSString * loginkeyBase64 = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    [result appendString:loginkeyBase64];
     
+    NSData * data = [loginkey dataUsingEncoding:NSUTF8StringEncoding];
+    NSString * loginkeyBase64 = [Base64 encode:data];
+    [result appendString:loginkeyBase64];
+    NSString * decodestr = [[NSString alloc] initWithData:[Base64 decode:loginkeyBase64] encoding:NSUTF8StringEncoding];
+    
+    
+    NSLog(@"decodestr: %@", decodestr);
     NSLog(@"passwordMD5:%@\n", pwdMD5);
     NSLog(@"loginkey:%@\n", loginkey);
     NSLog(@"loginkeyBase64: %@\n", loginkeyBase64);
     NSLog(@"result: %@", result);
     
+//    NSString * base64 = @"2647dCtLdcOtelFOGnsDASsew5VMwovCnsKFfsKtDcOew5oiw48Awpthw6.3.CuFPDlsOjwq4XSMOVwprCilPCjcOLw5bCoHFnw7nDhsKDTsOGOAzDksO.3.AVBhLG4Ow4zDr8KSwpTCoFrCocO2w6Mgw6Vpw48.2.D3QFw4N.2.w6TDvFjDpjUVwoDCvsK9wotdwpbCsMOPacKZwrNDw6Amw6HDrsOgw6vDk8OVacKfw6TDgH4NwrFra8O5w6rCjFUEKcKAOXDDvMKoLkvCjsKRRsKRHGw.3.wrp.2.HAgjEiQ6QHjCl8KWwpoBV8O2w5kLdxvDgcOXB8KLeMOMCMOIQsOWw7Ypw6TDgsKzW8Os";
+    
     NSURL * url = [[NSURL alloc] initWithString:result];
-    NSURLRequest * request = [[NSURLRequest alloc] initWithURL:url];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSString * jsonData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"jsonData:%@\n", jsonData);
-    }];
-    
-    
+    NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    NSData * data2 = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString * jsonData = [[NSString alloc] initWithData:data2 encoding:NSUTF8StringEncoding];
+    NSLog(@"jsonData: %@",jsonData);
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
