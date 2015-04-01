@@ -12,7 +12,9 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var tableData:Array<MigooRSS> = []
     var parseUrl = urlzx
     let identifier = "cell"
-    
+    let TAG_IMAGE = 1
+    let TAG_TITLELABEL = 2
+    let TAG_DATELABEL = 3
     //缩略图缓存
     var imageCache = Dictionary<String, UIImage>()
     var refresh = UIRefreshControl()
@@ -20,21 +22,19 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //加载nib
-        var nib = UINib(nibName: "ArticleListCell", bundle: nil)
-        self.tableView.registerNib(nib, forCellReuseIdentifier: identifier)
         refresh.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
         refresh.attributedTitle = NSAttributedString(string: "下拉刷新内容")
         tableView.addSubview(refresh)
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        //请求数据
         var p = Parser()
         p.getData(parseUrl)
         tableData = p.parserDatas
         if tableData.count == 0 {
             refreshData()
         }
-        tableView.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -69,39 +69,43 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         var month = time.substringWithRange(Range<String.Index>(start: advance(time.startIndex, 8), end: advance(time.startIndex, 11)))
         var year = time.substringWithRange(Range<String.Index>(start:advance(time.startIndex, 12), end: advance(time.startIndex, 16)))
         var author = tableData[indexPath.item].author
-        cell.textLabel?.font = UIFont(name: "宋体", size: 14.0)
-        cell.textLabel?.text = tableData[indexPath.item].title
-        cell.detailTextLabel?.text = "\(day)/\(month)/\(year) edit by \(author)"
+        var titleLabel = cell.viewWithTag(TAG_TITLELABEL) as? UILabel
+        var imageView = cell.viewWithTag(TAG_IMAGE) as? UIImageView
+        var dateLabel = cell.viewWithTag(TAG_DATELABEL) as? UILabel
+        titleLabel?.text = tableData[indexPath.item].title
+        dateLabel?.text = "\(day)/\(month)/\(year) edit by \(author)"
         //设置图标
         let url = tableData[indexPath.item].enclosure
         let image = self.imageCache[url]
         //var vImage = cell.imageView?.image
-        if image? != nil {
+        if image? == nil {
             let imgUrl = NSURL(string: url)
             let request = NSURLRequest(URL: imgUrl!)
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(),completionHandler: { (response:NSURLResponse!, data:NSData!, error:NSError!)
                 -> Void in
                 if data != nil {
-                    cell.imageView?.image = UIImage(data: data)
-                    self.imageCache[url] = cell.imageView?.image
+                    imageView?.image = UIImage(data: data)
+                    self.imageCache[url] = imageView?.image
                 } else {
-                    cell.imageView?.image = UIImage(named: "default.png")
+                    imageView?.image = UIImage(named: "default.png")
                 }
             })
         } else {
-            cell.imageView?.image = image
+            imageView?.image = image
         }
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var articleView = storyBoard.instantiateViewControllerWithIdentifier("articleView") as ArticleShowViewController
-        articleView.articleContent = tableData[indexPath.item].description
-        //隐藏tabbar
+        articleView.migoo = tableData[indexPath.item]
         articleView.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(articleView, animated:true)
         
+        
     }
-    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
 
 
 }

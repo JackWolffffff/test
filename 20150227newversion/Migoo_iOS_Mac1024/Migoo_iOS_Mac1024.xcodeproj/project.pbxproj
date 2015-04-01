@@ -22,6 +22,7 @@
 		1C7BCACA1AA001A000831405 /* MigooRSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BCAC91AA001A000831405 /* MigooRSS.swift */; };
 		1C7BCACF1AA002B000831405 /* LTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BCACE1AA002B000831405 /* LTViewController.swift */; };
 		1CCB49E41AA006E300D055C3 /* ArticleShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB49E31AA006E300D055C3 /* ArticleShowViewController.swift */; };
+		1CDA216F1ACBBDEF00028144 /* PassValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA216E1ACBBDEF00028144 /* PassValue.swift */; };
 		1CF0464D1AA6EE0300266481 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF0464C1AA6EE0300266481 /* icon.png */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		1C7BCAC91AA001A000831405 /* MigooRSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MigooRSS.swift; sourceTree = "<group>"; };
 		1C7BCACE1AA002B000831405 /* LTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTViewController.swift; sourceTree = "<group>"; };
 		1CCB49E31AA006E300D055C3 /* ArticleShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleShowViewController.swift; sourceTree = "<group>"; };
+		1CDA216E1ACBBDEF00028144 /* PassValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassValue.swift; sourceTree = "<group>"; };
 		1CF0464C1AA6EE0300266481 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				1CCB49E31AA006E300D055C3 /* ArticleShowViewController.swift */,
 				1C2BAE521ACA909D00DAE692 /* ArticleListCell.swift */,
 				1C2BAE531ACA909D00DAE692 /* ArticleListCell.xib */,
+				1CDA216E1ACBBDEF00028144 /* PassValue.swift */,
 			);
 			name = VIewControllers;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				TargetAttributes = {
 					1C7BCA991A9FFDDC00831405 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = BL3QRYM63B;
 					};
 					1C7BCAB01A9FFDDC00831405 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -281,6 +285,7 @@
 				1C2BAE541ACA909D00DAE692 /* ArticleListCell.swift in Sources */,
 				1C7BCACA1AA001A000831405 /* MigooRSS.swift in Sources */,
 				1C7BCAA41A9FFDDC00831405 /* TWViewController.swift in Sources */,
+				1CDA216F1ACBBDEF00028144 /* PassValue.swift in Sources */,
 				1C7BCAA01A9FFDDC00831405 /* AppDelegate.swift in Sources */,
 				1C7BCAC51AA000E600831405 /* Parser.swift in Sources */,
 				1C7BCAC31AA000DD00831405 /* Commen.swift in Sources */,
@@ -410,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Migoo_iOS_Mac1024/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -421,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Migoo_iOS_Mac1024/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

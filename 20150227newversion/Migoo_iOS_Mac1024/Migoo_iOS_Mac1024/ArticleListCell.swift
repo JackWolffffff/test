@@ -10,8 +10,13 @@ import UIKit
 
 class ArticleListCell: UITableViewCell {
 
+    @IBOutlet weak var aimage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        var label = UILabel(frame: CGRectMake(0, self.aimage.bounds.height - 30, self.aimage.bounds.width, 30))
+        label.text = "mac1024.com"
+        aimage.addSubview(label)
         // Initialization code
     }
 

@@ -18,9 +18,8 @@ class  Parser: NSObject,NSXMLParserDelegate {
     
     func getData(url:String) {
         var urlStr = NSURL(string: url)
+        NSLog("发送请求")
         var data = NSData(contentsOfURL: urlStr!)
-        
-        
         if data != nil {
             println("请求成功")
             var parser = NSXMLParser(data:data)
