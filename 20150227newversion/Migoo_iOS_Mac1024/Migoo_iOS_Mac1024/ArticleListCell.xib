@@ -21,7 +21,7 @@
             <connections>
                 <outlet property="aimage" destination="Uir-IX-2Tl" id="iB3-ld-mIG"/>
             </connections>
-            <point key="canvasLocation" x="345" y="231.5"/>
+            <point key="canvasLocation" x="379" y="263.5"/>
         </tableViewCell>
     </objects>
     <resources>

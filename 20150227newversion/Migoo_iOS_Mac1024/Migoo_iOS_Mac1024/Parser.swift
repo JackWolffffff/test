@@ -16,7 +16,7 @@ class  Parser: NSObject,NSXMLParserDelegate {
     var imageCache = Dictionary<String,UIImage>()
     var parserDatas: Array <MigooRSS> = []
     
-    func getData(url:String) {
+    func getData(url:String)->Bool {
         var urlStr = NSURL(string: url)
         NSLog("发送请求")
         var data = NSData(contentsOfURL: urlStr!)
@@ -26,12 +26,15 @@ class  Parser: NSObject,NSXMLParserDelegate {
             parser.delegate = self
             if (parser.parse() != false) {
                 println("解析成功")
+                return true
             }
             else {
                 println("解析失败")
+                return false
             }
         } else {
             println("请求失败")
+            return false
         }
     }
     

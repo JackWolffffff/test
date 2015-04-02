@@ -18,16 +18,24 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
 //    var imageCache = Dictionary<String, UIImage>()
     override func viewDidLoad() {
         super.viewDidLoad()
+        var quanquan = JvHua(frame: CGRectMake(self.view.bounds.width/2 - 25, self.view.bounds.height/2 - 25, 50, 50))
         self.refresh.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
         self.refresh.attributedTitle = NSAttributedString(string: "下拉刷新内容")
+        self.atableView.showsVerticalScrollIndicator = false
+        self.atableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         self.atableView.addSubview(refresh)
         
-        dispatch_async()
-        var p = Parser()
-        p.getData(parseUrl)
-        tableData = p.parserDatas
-        
-        
+        dispatch_async(dispatch_get_global_queue(0, 0), {
+            // 处理耗时操作的代码块...
+            var p = Parser()
+            p.getData(self.parseUrl)
+            tableData_Globle = p.parserDatas
+            self.tableData = tableData_Globle
+            //通知主线程刷新
+            dispatch_async(dispatch_get_main_queue(), {
+            self.atableView.reloadData()
+            });
+        })
         // Do any additional setup after loading the view, typically from a nib.
     }
     func refreshData (){
@@ -40,7 +48,8 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         NSLog("return tableRowHeight")
-        return 162
+        println(indexPath)
+        return (self.view.bounds.size.width - 20) * 2/3 + 10
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -48,25 +57,40 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tableData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        NSLog("cell")
+        println("cell")
+        println(tableData.count)
         var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        var imageView = UIImageView(frame: CGRectMake(10, 5, cell.bounds.size.width-20, cell.bounds.size.height-10))
-        var url = NSURL(string: tableData[indexPath.item].enclosure)
-        var request = NSURLRequest(URL: url!)
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
-            if data != nil {
-                imageView.image = UIImage(data: data)
-            } else {
-                NSLog("data is nil")
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        var imageView = UIImageView(frame: CGRectMake(10, 5, cell.bounds.size.width-20, (cell.bounds.size.width - 20)*2/3))
+        var titleLabel = UILabel(frame: CGRectMake(0, imageView.bounds.height - 30, imageView.bounds.width, 30))
+        titleLabel.backgroundColor = UIColor(red: 0.439, green: 0.757, blue: 0.918, alpha: 0.8)
+        if tableData.count > 0 {
+            titleLabel.text = tableData[indexPath.item].title
+            var url = NSURL(string: tableData[indexPath.item].enclosure)
+            var request = NSURLRequest(URL: url!)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
+                if data != nil {
+                    imageView.image = UIImage(data: data)
+                } else {
+                    NSLog("data is nil")
+                }
             }
-         
-        }
+        imageView.addSubview(titleLabel)
         cell.addSubview(imageView)
+        }
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.selectionStyle = UITableViewCellSelectionStyle.Gray
+        var articleView = storyboard?.instantiateViewControllerWithIdentifier("articleView") as ArticleShowViewController
+        articleView.migoo = tableData[indexPath.item]
+        articleView.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(articleView, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

@@ -8,34 +8,56 @@
 
 import UIKit
 
-class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
     var tableData:Array<MigooRSS> = []
     var parseUrl = urlzx
     let identifier = "cell"
     let TAG_IMAGE = 1
     let TAG_TITLELABEL = 2
     let TAG_DATELABEL = 3
+    let def = Define()
     //缩略图缓存
     var imageCache = Dictionary<String, UIImage>()
     var refresh = UIRefreshControl()
-    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //加载数据指示器
+        var quanquan = JvHua(frame: CGRect(x: self.view.center.x-50, y: self.view.center.y-150, width: 100, height: 100))
+        self.view.addSubview(quanquan)
         refresh.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
         refresh.attributedTitle = NSAttributedString(string: "下拉刷新内容")
-        tableView.addSubview(refresh)
+        self.tableView.addSubview(refresh)
         self.tableView.showsVerticalScrollIndicator = false
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        //异步获取数据
+        self.loadData()
         
-        //请求数据
-        var p = Parser()
-        p.getData(parseUrl)
-        tableData = p.parserDatas
-        if tableData.count == 0 {
-            refreshData()
-        }
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func loadData(){
+        dispatch_async(dispatch_get_global_queue(0, 0), {
+            // 处理耗时操作的代码块...
+            //请求数据
+            var p = Parser()
+            if p.getData(self.parseUrl) {
+                tableData_Globle = p.parserDatas
+                self.tableData = tableData_Globle
+                //通知主线程刷新
+                dispatch_async(dispatch_get_main_queue(), {
+                    JvHua.setHidden(true)
+                    self.tableView.reloadData()
+                })
+            } else {
+                JvHua.setHidden(true)
+                var alert = UIAlertView(title: "提示", message: "数据请求失败", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "再试一次")
+               
+                alert.show()
+            }
+            
+        })
     }
 
     //刷新数据
@@ -104,6 +126,7 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        println(indexPath)
         return 100
     }
 
