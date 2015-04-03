@@ -11,6 +11,18 @@
 		1C2BAE541ACA909D00DAE692 /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2BAE521ACA909D00DAE692 /* ArticleListCell.swift */; };
 		1C2BAE551ACA909D00DAE692 /* ArticleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2BAE531ACA909D00DAE692 /* ArticleListCell.xib */; };
 		1C4222D61ACCD5E8003BB76A /* JvHua.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4222D51ACCD5E8003BB76A /* JvHua.swift */; };
+		1C65ED271ACE3AEA00E4688C /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65ED261ACE3AEA00E4688C /* LaunchScreen.swift */; };
+		1C65ED331ACE4A7800E4688C /* SCNavTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1C65ED2A1ACE4A7800E4688C /* SCNavTabBar.bundle */; };
+		1C65ED341ACE4A7800E4688C /* SCNavTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65ED2D1ACE4A7800E4688C /* SCNavTabBarController.m */; };
+		1C65ED351ACE4A7800E4688C /* SCNavTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65ED301ACE4A7800E4688C /* SCNavTabBar.m */; };
+		1C65ED361ACE4A7800E4688C /* SCPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65ED321ACE4A7800E4688C /* SCPopView.m */; };
+		1C65ED3E1ACE57C700E4688C /* 引导页one使用.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C65ED371ACE57C700E4688C /* 引导页one使用.png */; };
+		1C65ED3F1ACE57C700E4688C /* ClickMe.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C65ED381ACE57C700E4688C /* ClickMe.png */; };
+		1C65ED401ACE57C700E4688C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C65ED391ACE57C700E4688C /* Default.png */; };
+		1C65ED411ACE57C700E4688C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C65ED3A1ACE57C700E4688C /* logo.png */; };
+		1C65ED421ACE57C700E4688C /* navBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C65ED3B1ACE57C700E4688C /* navBottom.png */; };
+		1C65ED431ACE57C700E4688C /* three使用.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C65ED3C1ACE57C700E4688C /* three使用.png */; };
+		1C65ED441ACE57C700E4688C /* two使用.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C65ED3D1ACE57C700E4688C /* two使用.png */; };
 		1C7BCAA01A9FFDDC00831405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BCA9F1A9FFDDC00831405 /* AppDelegate.swift */; };
 		1C7BCAA21A9FFDDC00831405 /* ZXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BCAA11A9FFDDC00831405 /* ZXViewController.swift */; };
 		1C7BCAA41A9FFDDC00831405 /* TWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7BCAA31A9FFDDC00831405 /* TWViewController.swift */; };
@@ -43,6 +55,23 @@
 		1C2BAE521ACA909D00DAE692 /* ArticleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
 		1C2BAE531ACA909D00DAE692 /* ArticleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleListCell.xib; sourceTree = "<group>"; };
 		1C4222D51ACCD5E8003BB76A /* JvHua.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JvHua.swift; sourceTree = "<group>"; };
+		1C65ED261ACE3AEA00E4688C /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		1C65ED291ACE4A7800E4688C /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		1C65ED2A1ACE4A7800E4688C /* SCNavTabBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SCNavTabBar.bundle; sourceTree = "<group>"; };
+		1C65ED2C1ACE4A7800E4688C /* SCNavTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNavTabBarController.h; sourceTree = "<group>"; };
+		1C65ED2D1ACE4A7800E4688C /* SCNavTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNavTabBarController.m; sourceTree = "<group>"; };
+		1C65ED2F1ACE4A7800E4688C /* SCNavTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNavTabBar.h; sourceTree = "<group>"; };
+		1C65ED301ACE4A7800E4688C /* SCNavTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNavTabBar.m; sourceTree = "<group>"; };
+		1C65ED311ACE4A7800E4688C /* SCPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPopView.h; sourceTree = "<group>"; };
+		1C65ED321ACE4A7800E4688C /* SCPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPopView.m; sourceTree = "<group>"; };
+		1C65ED371ACE57C700E4688C /* 引导页one使用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "引导页one使用.png"; path = "images/引导页one使用.png"; sourceTree = "<group>"; };
+		1C65ED381ACE57C700E4688C /* ClickMe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ClickMe.png; path = images/ClickMe.png; sourceTree = "<group>"; };
+		1C65ED391ACE57C700E4688C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		1C65ED3A1ACE57C700E4688C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
+		1C65ED3B1ACE57C700E4688C /* navBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navBottom.png; path = images/navBottom.png; sourceTree = "<group>"; };
+		1C65ED3C1ACE57C700E4688C /* three使用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "three使用.png"; path = "images/three使用.png"; sourceTree = "<group>"; };
+		1C65ED3D1ACE57C700E4688C /* two使用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "two使用.png"; path = "images/two使用.png"; sourceTree = "<group>"; };
+		1C65ED451ACE5AEC00E4688C /* Migoo_iOS_Mac1024-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Migoo_iOS_Mac1024-Bridging-Header.h"; sourceTree = "<group>"; };
 		1C7BCA9A1A9FFDDC00831405 /* Migoo_iOS_Mac1024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migoo_iOS_Mac1024.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7BCA9E1A9FFDDC00831405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C7BCA9F1A9FFDDC00831405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +111,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C65ED281ACE4A7800E4688C /* SCNavTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1C65ED291ACE4A7800E4688C /* CommonMacro.h */,
+				1C65ED2A1ACE4A7800E4688C /* SCNavTabBar.bundle */,
+				1C65ED2B1ACE4A7800E4688C /* ViewControllers */,
+				1C65ED2E1ACE4A7800E4688C /* Views */,
+			);
+			path = SCNavTabBar;
+			sourceTree = "<group>";
+		};
+		1C65ED2B1ACE4A7800E4688C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C65ED2C1ACE4A7800E4688C /* SCNavTabBarController.h */,
+				1C65ED2D1ACE4A7800E4688C /* SCNavTabBarController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1C65ED2E1ACE4A7800E4688C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C65ED2F1ACE4A7800E4688C /* SCNavTabBar.h */,
+				1C65ED301ACE4A7800E4688C /* SCNavTabBar.m */,
+				1C65ED311ACE4A7800E4688C /* SCPopView.h */,
+				1C65ED321ACE4A7800E4688C /* SCPopView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1C7BCA911A9FFDDC00831405 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +163,7 @@
 		1C7BCA9C1A9FFDDC00831405 /* Migoo_iOS_Mac1024 */ = {
 			isa = PBXGroup;
 			children = (
+				1C65ED281ACE4A7800E4688C /* SCNavTabBar */,
 				1CD4C6481AA6CE91004C658E /* Images */,
 				1C7BCACB1AA0024800831405 /* VIewControllers */,
 				1C7BCAC81AA0018500831405 /* Model */,
@@ -113,6 +174,7 @@
 				1CF0464C1AA6EE0300266481 /* icon.png */,
 				1C7BCAAA1A9FFDDC00831405 /* LaunchScreen.xib */,
 				1C7BCA9D1A9FFDDC00831405 /* Supporting Files */,
+				1C65ED451ACE5AEC00E4688C /* Migoo_iOS_Mac1024-Bridging-Header.h */,
 			);
 			path = Migoo_iOS_Mac1024;
 			sourceTree = "<group>";
@@ -166,12 +228,13 @@
 			children = (
 				1C7BCAA11A9FFDDC00831405 /* ZXViewController.swift */,
 				1C7BCAA31A9FFDDC00831405 /* TWViewController.swift */,
-				1C7BCACE1AA002B000831405 /* LTViewController.swift */,
 				1C24935A1ACD35B3002C6AA0 /* VideoViewController.swift */,
+				1C7BCACE1AA002B000831405 /* LTViewController.swift */,
 				1CCB49E31AA006E300D055C3 /* ArticleShowViewController.swift */,
 				1C2BAE521ACA909D00DAE692 /* ArticleListCell.swift */,
 				1C2BAE531ACA909D00DAE692 /* ArticleListCell.xib */,
 				1CDA216E1ACBBDEF00028144 /* PassValue.swift */,
+				1C65ED261ACE3AEA00E4688C /* LaunchScreen.swift */,
 			);
 			name = VIewControllers;
 			sourceTree = "<group>";
@@ -179,6 +242,13 @@
 		1CD4C6481AA6CE91004C658E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1C65ED371ACE57C700E4688C /* 引导页one使用.png */,
+				1C65ED381ACE57C700E4688C /* ClickMe.png */,
+				1C65ED391ACE57C700E4688C /* Default.png */,
+				1C65ED3A1ACE57C700E4688C /* logo.png */,
+				1C65ED3B1ACE57C700E4688C /* navBottom.png */,
+				1C65ED3C1ACE57C700E4688C /* three使用.png */,
+				1C65ED3D1ACE57C700E4688C /* two使用.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -265,9 +335,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C7BCAA71A9FFDDC00831405 /* Main.storyboard in Resources */,
+				1C65ED401ACE57C700E4688C /* Default.png in Resources */,
+				1C65ED441ACE57C700E4688C /* two使用.png in Resources */,
+				1C65ED331ACE4A7800E4688C /* SCNavTabBar.bundle in Resources */,
 				1C7BCAAC1A9FFDDC00831405 /* LaunchScreen.xib in Resources */,
+				1C65ED421ACE57C700E4688C /* navBottom.png in Resources */,
 				1C7BCAA91A9FFDDC00831405 /* Images.xcassets in Resources */,
 				1CF0464D1AA6EE0300266481 /* icon.png in Resources */,
+				1C65ED411ACE57C700E4688C /* logo.png in Resources */,
+				1C65ED3E1ACE57C700E4688C /* 引导页one使用.png in Resources */,
+				1C65ED431ACE57C700E4688C /* three使用.png in Resources */,
+				1C65ED3F1ACE57C700E4688C /* ClickMe.png in Resources */,
 				1C2BAE551ACA909D00DAE692 /* ArticleListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,19 +364,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C65ED271ACE3AEA00E4688C /* LaunchScreen.swift in Sources */,
 				1CCB49E41AA006E300D055C3 /* ArticleShowViewController.swift in Sources */,
 				1C7BCACF1AA002B000831405 /* LTViewController.swift in Sources */,
 				1C2BAE541ACA909D00DAE692 /* ArticleListCell.swift in Sources */,
 				1C7BCACA1AA001A000831405 /* MigooRSS.swift in Sources */,
 				1C4222D61ACCD5E8003BB76A /* JvHua.swift in Sources */,
 				1C24935B1ACD35B3002C6AA0 /* VideoViewController.swift in Sources */,
+				1C65ED361ACE4A7800E4688C /* SCPopView.m in Sources */,
 				1C7BCAA41A9FFDDC00831405 /* TWViewController.swift in Sources */,
+				1C65ED341ACE4A7800E4688C /* SCNavTabBarController.m in Sources */,
 				1CDA216F1ACBBDEF00028144 /* PassValue.swift in Sources */,
 				1C7BCAA01A9FFDDC00831405 /* AppDelegate.swift in Sources */,
 				1C7BCAC51AA000E600831405 /* Parser.swift in Sources */,
 				1C7BCAC31AA000DD00831405 /* Commen.swift in Sources */,
 				1C7BCAC71AA000ED00831405 /* Define.swift in Sources */,
 				1C7BCAA21A9FFDDC00831405 /* ZXViewController.swift in Sources */,
+				1C65ED351ACE4A7800E4688C /* SCNavTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Migoo_iOS_Mac1024/Migoo_iOS_Mac1024-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -444,6 +527,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Migoo_iOS_Mac1024/Migoo_iOS_Mac1024-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M0S-xd-U5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jH9-NS-N3g">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -30,7 +30,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcS-88-I1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="-635"/>
+            <point key="canvasLocation" x="838" y="-635"/>
         </scene>
         <!--mt-->
         <scene sceneID="F18-W7-zog">
@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70S-km-fZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="37"/>
+            <point key="canvasLocation" x="167" y="880"/>
         </scene>
         <!--zx-->
         <scene sceneID="6Ec-Q3-VYj">
@@ -156,12 +156,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahr-Bv-1EP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="-637"/>
+            <point key="canvasLocation" x="987" y="880"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pjr-HH-gp2">
+            <objects>
+                <viewController id="XlC-lg-sss" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WrB-uh-8H6"/>
+                        <viewControllerLayoutGuide type="bottom" id="LeY-BK-W8M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2VZ-hE-kyd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VMu-Ss-NeE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LeY-BK-W8M" firstAttribute="top" secondItem="VMu-Ss-NeE" secondAttribute="bottom" id="BKA-Ni-ZlF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VMu-Ss-NeE" secondAttribute="trailing" constant="-16" id="VMQ-oJ-ehY"/>
+                            <constraint firstItem="VMu-Ss-NeE" firstAttribute="leading" secondItem="2VZ-hE-kyd" secondAttribute="leadingMargin" constant="-16" id="uG0-Ps-Ik6"/>
+                            <constraint firstItem="VMu-Ss-NeE" firstAttribute="top" secondItem="2VZ-hE-kyd" secondAttribute="topMargin" id="uhs-C9-1TM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NE6-hw-Qrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1363" y="880"/>
+        </scene>
+        <!--LaunchScreen-->
+        <scene sceneID="zs6-xF-VTA">
+            <objects>
+                <viewController id="jH9-NS-N3g" userLabel="LaunchScreen" customClass="LaunchScreen" customModule="Migoo_iOS_Mac1024" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGR-8u-xfT"/>
+                        <viewControllerLayoutGuide type="bottom" id="sKK-rP-hMo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lEf-My-St3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPO-j7-3JL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="-635"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YnU-3z-BCB">
             <objects>
-                <tabBarController id="M0S-xd-U5n" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="M0S-xd-U5n" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="hUo-ay-TKR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -177,7 +225,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WB2-Z4-bWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-177" y="-123"/>
+            <point key="canvasLocation" x="363" y="-635"/>
         </scene>
         <!--资讯-->
         <scene sceneID="PW5-cs-fLm">
@@ -197,7 +245,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oj5-Fv-rsv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621" y="-635"/>
+            <point key="canvasLocation" x="987" y="196"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Pg9-1M-uBo">
+            <objects>
+                <viewController id="zdA-H9-rrR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LGz-XS-ydO"/>
+                        <viewControllerLayoutGuide type="bottom" id="EDe-XO-4De"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cgo-Px-QQQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vh-TA-nK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="196"/>
         </scene>
         <!--视频-->
         <scene sceneID="2c6-4o-PFY">
@@ -244,12 +310,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbR-ry-FHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="782"/>
+            <point key="canvasLocation" x="-226" y="880"/>
         </scene>
         <!--论 坛-->
         <scene sceneID="MXX-39-nPI">
             <objects>
-                <viewController storyboardIdentifier="lt" id="Rlw-ni-bBr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lt" id="Rlw-ni-bBr" customClass="LTViewController" customModule="Migoo_iOS_Mac1024" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hhv-aP-ZFR"/>
                         <viewControllerLayoutGuide type="bottom" id="T1T-Jn-zkU"/>
@@ -263,7 +329,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGH-b1-V4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="703"/>
+            <point key="canvasLocation" x="571" y="880"/>
+        </scene>
+        <!--关于我们-->
+        <scene sceneID="fjK-eS-i9s">
+            <objects>
+                <viewController storyboardIdentifier="AboutUS" id="79c-r5-07D" userLabel="关于我们" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0xq-rs-tT3"/>
+                        <viewControllerLayoutGuide type="bottom" id="V0i-TO-tyf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2du-lg-3Lx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xsu-pb-w9S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywP-rC-p1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="-635"/>
         </scene>
         <!--美图-->
         <scene sceneID="4mc-f6-fWn">
@@ -282,7 +367,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJx-by-QsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621" y="55"/>
+            <point key="canvasLocation" x="167" y="196"/>
         </scene>
         <!--论坛-->
         <scene sceneID="8YP-Fj-8Fe">
@@ -301,7 +386,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Seq-Kb-McW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-325" y="782"/>
+            <point key="canvasLocation" x="-226" y="196"/>
         </scene>
         <!--论坛-->
         <scene sceneID="YNm-Qy-1Kq">
@@ -320,7 +405,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4o-sQ-1fJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621" y="791"/>
+            <point key="canvasLocation" x="571" y="196"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

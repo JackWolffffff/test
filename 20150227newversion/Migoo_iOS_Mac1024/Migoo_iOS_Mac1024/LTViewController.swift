@@ -9,6 +9,27 @@
 
 import UIKit
 
-class LTViewController: UIViewController {
+class LTViewController: UIViewController, UIWebViewDelegate {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initView()
+    }
+    
+    func initView(){
+        println("11")
+        var webView = UIWebView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
+        webView.delegate = self
+        webView.scrollView.showsHorizontalScrollIndicator = false
+        webView.scrollView.showsVerticalScrollIndicator = false
+        webView.scrollView.bounces = false
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: urllt)!))
+        self.view.addSubview(webView)
+    }
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        var url = webView.request?.URL.absoluteString
+        println(url)
+    }
+    
 }

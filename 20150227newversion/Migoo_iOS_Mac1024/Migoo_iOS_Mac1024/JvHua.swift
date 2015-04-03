@@ -16,7 +16,7 @@ class JvHua: UIView {
 //        self.backgroundColor = UIColor.purpleColor()
         var activityIndicatorView:UIActivityIndicatorView
         //风格有WhiteLarge菊花大小为37*37，White为20*20，Gray为灰色
-        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         //activityIndicatorView.frame = CGRectMake(160, 230, 0, 0)
         //设置位置
         activityIndicatorView.center =  CGPointMake(50,40)

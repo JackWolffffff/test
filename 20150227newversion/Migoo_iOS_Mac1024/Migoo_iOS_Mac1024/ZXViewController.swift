@@ -21,10 +21,10 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var refresh = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        self.tabBarController?.tabBar.translucent = false
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.282, green: 0.588, blue: 0.816, alpha: 1.0)
         super.viewDidLoad()
-        //加载数据指示器
-        var quanquan = JvHua(frame: CGRect(x: self.view.center.x-50, y: self.view.center.y-150, width: 100, height: 100))
-        self.view.addSubview(quanquan)
         refresh.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
         refresh.attributedTitle = NSAttributedString(string: "下拉刷新内容")
         self.tableView.addSubview(refresh)
@@ -42,6 +42,9 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             // 处理耗时操作的代码块...
             //请求数据
             var p = Parser()
+            //加载数据指示器
+            var quanquan = JvHua(frame: CGRect(x: self.view.center.x-50, y: self.view.center.y-150, width: 100, height: 100))
+            self.view.addSubview(quanquan)
             if p.getData(self.parseUrl) {
                 tableData_Globle = p.parserDatas
                 self.tableData = tableData_Globle
@@ -124,6 +127,13 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         self.navigationController?.pushViewController(articleView, animated:true)
         
         
+    }
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.5, 0.1, 0.1)
+        UIView.animateWithDuration(0.5, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+            cell.viewWithTag(3)?.alpha = 1.0
+        })
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         println(indexPath)

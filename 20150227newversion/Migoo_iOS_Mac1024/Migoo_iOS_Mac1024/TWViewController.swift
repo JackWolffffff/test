@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UIAlertViewDelegate {
 
     @IBOutlet weak var atableView: UITableView!
     var tableData:Array<MigooRSS> = []
@@ -22,20 +22,10 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         self.refresh.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
         self.refresh.attributedTitle = NSAttributedString(string: "下拉刷新内容")
         self.atableView.showsVerticalScrollIndicator = false
-        self.atableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        self.atableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.atableView.addSubview(refresh)
+        self.loadData()
         
-        dispatch_async(dispatch_get_global_queue(0, 0), {
-            // 处理耗时操作的代码块...
-            var p = Parser()
-            p.getData(self.parseUrl)
-            tableData_Globle = p.parserDatas
-            self.tableData = tableData_Globle
-            //通知主线程刷新
-            dispatch_async(dispatch_get_main_queue(), {
-            self.atableView.reloadData()
-            });
-        })
         // Do any additional setup after loading the view, typically from a nib.
     }
     func refreshData (){
@@ -46,9 +36,34 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         self.atableView.reloadData()
     }
     
+    func loadData(){
+        dispatch_async(dispatch_get_global_queue(0, 0), {
+            // 处理耗时操作的代码块...
+            //请求数据
+            var p = Parser()
+            //加载数据指示器
+            var quanquan = JvHua(frame: CGRect(x: self.view.center.x-50, y: self.view.center.y-150, width: 100, height: 100))
+            if p.getData(self.parseUrl) {
+                tableData_Globle = p.parserDatas
+                self.tableData = tableData_Globle
+                //通知主线程刷新
+                dispatch_async(dispatch_get_main_queue(), {
+                    JvHua.setHidden(true)
+                    self.atableView.reloadData()
+                })
+            } else {
+                JvHua.setHidden(true)
+                var alert = UIAlertView(title: "提示", message: "数据请求失败", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "再试一次")
+                
+                alert.show()
+            }
+            
+        })
+    }
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        NSLog("return tableRowHeight")
-        println(indexPath)
+//        NSLog("return tableRowHeight")
+//        println(indexPath)
         return (self.view.bounds.size.width - 20) * 2/3 + 10
     }
     
@@ -63,13 +78,15 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         println("cell")
         println(tableData.count)
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         var imageView = UIImageView(frame: CGRectMake(10, 5, cell.bounds.size.width-20, (cell.bounds.size.width - 20)*2/3))
         var titleLabel = UILabel(frame: CGRectMake(0, imageView.bounds.height - 30, imageView.bounds.width, 30))
+        titleLabel.textColor = UIColor.whiteColor()
         titleLabel.backgroundColor = UIColor(red: 0.439, green: 0.757, blue: 0.918, alpha: 0.8)
         if tableData.count > 0 {
-            titleLabel.text = tableData[indexPath.item].title
+            titleLabel.text = "  \(tableData[indexPath.item].title)"
             var url = NSURL(string: tableData[indexPath.item].enclosure)
             var request = NSURLRequest(URL: url!)
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
@@ -86,11 +103,19 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.selectionStyle = UITableViewCellSelectionStyle.Gray
+//        tableView.cellForRowAtIndexPath(indexPath)?.selectionStyle = UITableViewCellSelectionStyle.Gray
         var articleView = storyboard?.instantiateViewControllerWithIdentifier("articleView") as ArticleShowViewController
         articleView.migoo = tableData[indexPath.item]
         articleView.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(articleView, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.5, 0.1, 0.1)
+        UIView.animateWithDuration(0.5, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+            cell.viewWithTag(3)?.alpha = 1.0
+        })
     }
     
     override func didReceiveMemoryWarning() {
