@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Migoo_iOS_Mac1024/VideoViewController.swift"
+            timestampString = "450004860.151948"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Migoo_iOS_Mac1024/VideoViewController.swift"
+            timestampString = "450004860.151948"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Migoo_iOS_Mac1024/VideoViewController.swift"
+            timestampString = "449986237.018705"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "VideoViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Migoo_iOS_Mac1024/VideoViewController.swift"
+            timestampString = "450004860.151948"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Migoo_iOS_Mac1024.VideoViewController.collectionView (Migoo_iOS_Mac1024.VideoViewController)(ObjectiveC.UICollectionView, cellForItemAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UICollectionViewCell"
+                  moduleName = "Migoo_iOS_Mac1024"
+                  urlString = "file:///Users/rongjunrj/Downloads/%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81/%E5%85%AC%E5%8F%B8%E6%B5%8B%E8%AF%95/test-ac5b5f849b43bce869358eb2a378a8349b6fe8a8/20150227newversion/Migoo_iOS_Mac1024/Migoo_iOS_Mac1024/VideoViewController.swift"
+                  timestampString = "450025480.56277"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "2622">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Migoo_iOS_Mac1024.VideoViewController.collectionView (Migoo_iOS_Mac1024.VideoViewController)(ObjectiveC.UICollectionView, cellForItemAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UICollectionViewCell"
+                  moduleName = "Migoo_iOS_Mac1024"
+                  urlString = "file:///Users/rongjunrj/Downloads/%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81/%E5%85%AC%E5%8F%B8%E6%B5%8B%E8%AF%95/test-ac5b5f849b43bce869358eb2a378a8349b6fe8a8/20150227newversion/Migoo_iOS_Mac1024/Migoo_iOS_Mac1024/VideoViewController.swift"
+                  timestampString = "450025480.562978"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "4252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Migoo_iOS_Mac1024/ZXViewController.swift"
+            timestampString = "450026536.324601"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "loadData()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

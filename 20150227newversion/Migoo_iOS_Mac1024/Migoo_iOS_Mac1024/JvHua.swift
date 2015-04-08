@@ -7,16 +7,15 @@
 //
 
 import UIKit
-var isHidden = true
+var isHidden = false
 class JvHua: UIView {
     
- 
+    var activityIndicatorView:UIActivityIndicatorView!
     override init(frame: CGRect) {
         super.init(frame: frame)
 //        self.backgroundColor = UIColor.purpleColor()
-        var activityIndicatorView:UIActivityIndicatorView
         //风格有WhiteLarge菊花大小为37*37，White为20*20，Gray为灰色
-        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
         //activityIndicatorView.frame = CGRectMake(160, 230, 0, 0)
         //设置位置
         activityIndicatorView.center =  CGPointMake(50,40)
@@ -28,10 +27,9 @@ class JvHua: UIView {
         activityIndicatorView.color = UIColor.grayColor()
         //是否在停止转动时隐藏
         activityIndicatorView.hidesWhenStopped = true
-        //        alertView.addSubview(activityIndicatorView)
         activityIndicatorView.startAnimating()
         self.addSubview(activityIndicatorView)
-        self.hidden = isHidden
+        self.hidden = false
     }
    
     class func setHidden(hidden:Bool){

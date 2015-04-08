@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // firstStart or everLaunched?
         if !NSUserDefaults.standardUserDefaults().boolForKey("everLaunched") {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "everLaunched")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstStart")

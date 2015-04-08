@@ -11,7 +11,6 @@ import UIKit
 class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
     var tableData:Array<MigooRSS> = []
     var parseUrl = urlzx
-    let identifier = "cell"
     let TAG_IMAGE = 1
     let TAG_TITLELABEL = 2
     let TAG_DATELABEL = 3
@@ -20,11 +19,10 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     var imageCache = Dictionary<String, UIImage>()
     var refresh = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
-        self.tabBarController?.tabBar.translucent = false
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.282, green: 0.588, blue: 0.816, alpha: 1.0)
         super.viewDidLoad()
+       
         refresh.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
         refresh.attributedTitle = NSAttributedString(string: "下拉刷新内容")
         self.tableView.addSubview(refresh)
@@ -39,19 +37,19 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     func loadData(){
         dispatch_async(dispatch_get_global_queue(0, 0), {
-            // 处理耗时操作的代码块...
+            //处理耗时操作的代码块...
             //请求数据
             var p = Parser()
-            //加载数据指示器
-            var quanquan = JvHua(frame: CGRect(x: self.view.center.x-50, y: self.view.center.y-150, width: 100, height: 100))
-            self.view.addSubview(quanquan)
+            var quanquan = JvHua(frame: CGRect(x: self.view.center.x-50, y: self.view.center.y-100, width: 100, height: 100))
             if p.getData(self.parseUrl) {
-                tableData_Globle = p.parserDatas
-                self.tableData = tableData_Globle
+//                tableData_Globle = p.parserDatas
+                //加载数据指示器
+                self.view.addSubview(quanquan)
+                self.tableData = p.parserDatas
                 //通知主线程刷新
                 dispatch_async(dispatch_get_main_queue(), {
-                    JvHua.setHidden(true)
                     self.tableView.reloadData()
+                    quanquan.hidden = true
                 })
             } else {
                 JvHua.setHidden(true)
@@ -67,6 +65,7 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     func refreshData (){
         var p1 = Parser()
         p1.getData(parseUrl)
+        tableData = []
         tableData = p1.parserDatas
         self.refresh.endRefreshing()
         self.tableView.reloadData()
@@ -85,7 +84,7 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         return 1
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         cell.accessoryType = UITableViewCellAccessoryType.None
         //设置标题
         
@@ -110,7 +109,7 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 -> Void in
                 if data != nil {
                     imageView?.image = UIImage(data: data)
-                    self.imageCache[url] = imageView?.image
+                    //self.imageCache[url] = imageView?.image
                 } else {
                     imageView?.image = UIImage(named: "default.png")
                 }
@@ -125,18 +124,17 @@ class ZXViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         articleView.migoo = tableData[indexPath.item]
         articleView.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(articleView, animated:true)
-        
-        
     }
+    
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.layer.transform = CATransform3DMakeScale(0.5, 0.1, 0.1)
-        UIView.animateWithDuration(0.5, animations: {
+        UIView.animateWithDuration(0.3, animations: {
             cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
             cell.viewWithTag(3)?.alpha = 1.0
         })
     }
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        println(indexPath)
         return 100
     }
 

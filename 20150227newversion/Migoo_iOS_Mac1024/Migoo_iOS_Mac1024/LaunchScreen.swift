@@ -13,16 +13,15 @@ import UIKit
 class LaunchScreen: UIViewController,UIScrollViewDelegate {
     var pageControl = UIPageControl()
     var ClickMe = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //scrollview
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         if NSUserDefaults.standardUserDefaults().boolForKey("firstStart") {
-            
             setFirstOpen()
         } else {
             println(NSUserDefaults.standardUserDefaults().boolForKey("firstStart"))
@@ -42,17 +41,17 @@ class LaunchScreen: UIViewController,UIScrollViewDelegate {
         //image
         var LoadingOne = UIImageView()
         LoadingOne.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
-        LoadingOne.image = UIImage(named: "引导页one使用.png")
+        LoadingOne.image = UIImage(named: "one.png")
         scrollview.addSubview(LoadingOne)
         
         var LoadingTwo = UIImageView()
         LoadingTwo.frame = CGRectMake(self.view.bounds.width, 0, self.view.bounds.width, self.view.bounds.height)
-        LoadingTwo.image = UIImage(named: "two使用.png")
+        LoadingTwo.image = UIImage(named: "two.png")
         scrollview.addSubview(LoadingTwo)
         
         var LoadingThree = UIImageView()
         LoadingThree.frame = CGRectMake(self.view.bounds.width * 2, 0, self.view.bounds.width, self.view.bounds.height)
-        LoadingThree.image = UIImage(named: "three使用.png")
+        LoadingThree.image = UIImage(named: "three.png")
         scrollview.addSubview(LoadingThree)
         
         //pageControl
@@ -78,7 +77,7 @@ class LaunchScreen: UIViewController,UIScrollViewDelegate {
     //寻找main控件 页面跳转
     func turnNextView(){
         var sb = UIStoryboard(name: "Main", bundle: nil)
-        var vc: AnyObject = sb.instantiateViewControllerWithIdentifier("TabBarController") as UITabBarController
+        var vc: AnyObject = sb.instantiateViewControllerWithIdentifier("MainTabBarController") as UITabBarController
         //self.performSegueWithIdentifier("load", sender: self)
         self.presentViewController(vc as UIViewController, animated: true, completion: nil)
     }
