@@ -65,7 +65,7 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         println("cell")
         println(tableData.count)
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         var imageView = UIImageView(frame: CGRectMake(10, 5, cell.bounds.size.width-20, (cell.bounds.size.width - 20)*2/3))
         var titleLabel = UILabel(frame: CGRectMake(0, imageView.bounds.height - 30, imageView.bounds.width, 30))
@@ -87,9 +87,13 @@ class TWViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         return cell
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        touches
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.selectionStyle = UITableViewCellSelectionStyle.Gray
-        var articleView = storyboard?.instantiateViewControllerWithIdentifier("articleView") as ArticleShowViewController
+        var articleView = storyboard?.instantiateViewControllerWithIdentifier("articleView") as! ArticleShowViewController
         articleView.migoo = tableData[indexPath.item]
         articleView.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(articleView, animated: true)

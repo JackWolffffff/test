@@ -12,7 +12,6 @@ class zxMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarController?.tabBarItem.image = UIImage(named: "tab_home_icon.png")
         
         var zx = storyBoard.instantiateViewControllerWithIdentifier("zxview") as ZXViewController
         zx.title = "资讯"

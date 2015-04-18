@@ -80,6 +80,7 @@ class XMViewController: UIViewController,UITableViewDelegate, UITableViewDataSou
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         cell.accessoryType = UITableViewCellAccessoryType.None
@@ -105,6 +106,7 @@ class XMViewController: UIViewController,UITableViewDelegate, UITableViewDataSou
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(),completionHandler: { (response:NSURLResponse!, data:NSData!, error:NSError!)
                 -> Void in
                 if data != nil {
+                    
                     imageView?.image = UIImage(data: data)
                     //self.imageCache[url] = imageView?.image
                 } else {
